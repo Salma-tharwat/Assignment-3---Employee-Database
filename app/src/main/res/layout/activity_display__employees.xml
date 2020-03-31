@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Name_label"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:text="  Name: "
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Name_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Name_label"
+        android:layout_alignRight="@id/Name_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="-86dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="-83dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textAlignment="gravity"
+        android:textColor="#202020"
+        android:textSize="20sp"
+        android:background="#C0C0C0"/>
+
+    <TextView
+        android:id="@+id/TitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Name_view"
+        android:layout_marginTop="27dp"
+        android:text="   Title: "
+        android:textSize="26sp"
+        />
+
+    <TextView
+        android:id="@+id/Title_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TitleLabel"
+        android:layout_alignRight="@id/TitleLabel"
+        android:layout_marginLeft="-86dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="-177dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="#202020"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:background="#C0C0C0"/>
+
+    <TextView
+        android:id="@+id/Phone_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TitleLabel"
+        android:layout_marginTop="91dp"
+        android:text="   Phone: "
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/Phone_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Phone_label"
+        android:layout_alignRight="@id/Phone_label"
+        android:layout_marginLeft="-86dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="-154dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="#202020"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:background="#C0C0C0"/>
+
+    <TextView
+        android:id="@+id/Email_Label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Phone_label"
+        android:layout_marginTop="91dp"
+        android:text="   Email: "
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/Email_View"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Email_Label"
+        android:layout_alignRight="@id/Email_Label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="-86dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginRight="-261dp"
+        android:background="#C0C0C0"
+        android:ems="10"
+        android:gravity="center"
+        android:text=""
+        android:textAlignment="gravity"
+        android:textColor="#202020"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Email_Label"
+        android:layout_marginTop="91dp"
+        android:text="   Department: "
+        android:textSize="26sp"
+        />
+
+    <TextView
+        android:id="@+id/Dep_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_alignRight="@id/textView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="-86dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="-100dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textAlignment="gravity"
+        android:textColor="#202020"
+        android:textSize="20sp"
+        android:background="#C0C0C0"/>
+
+
+</RelativeLayout>

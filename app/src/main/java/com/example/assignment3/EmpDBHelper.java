@@ -56,6 +56,27 @@ public class EmpDBHelper extends SQLiteOpenHelper {
         resultSet.moveToFirst();
         return resultSet;
     }
+    public Cursor Get_Employee_Data(Integer ID )
+    {
+        EmpDatabase=getReadableDatabase();
+        Cursor resultSet = EmpDatabase.rawQuery("Select * from Employee Where EmpID Like \'%"+ID+"%\'",null);
+        resultSet.moveToFirst();
+        return resultSet;
+    }
+    public Cursor Get_Employee_ID(String name)
+    {
+        EmpDatabase=getReadableDatabase();
+        Cursor resultSet = EmpDatabase.rawQuery("Select EmpID from Employee Where Name Like \'%"+name+"%\'",null);
+        resultSet.moveToFirst();
+        return resultSet;
+    }
+    public Cursor Get_Dep_Name(Integer ID)
+    {
+        EmpDatabase=getReadableDatabase();
+        Cursor resultSet = EmpDatabase.rawQuery("Select Name from Department Where DeptID  Like \'%"+ID+"%\'",null);
+        resultSet.moveToFirst();
+        return resultSet;
+    }
     public void clearDatabase() {
 
         String clearDBQuery = "DELETE FROM Department";

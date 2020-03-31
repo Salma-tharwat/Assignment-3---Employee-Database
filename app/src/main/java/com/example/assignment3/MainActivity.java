@@ -2,9 +2,11 @@ package com.example.assignment3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,8 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity
+{
+    public static String Emp_name_gotten;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -38,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
            {
                EmpAdapter.clear();
                Toast.makeText(getApplicationContext(),"HERE", Toast.LENGTH_SHORT).show();
-
                String Emp_name=name.getText().toString();
               Cursor cursor=newEmp. SearchEmployees(Emp_name);
               Integer num=cursor.getCount();
@@ -48,10 +50,22 @@ public class MainActivity extends AppCompatActivity {
                    EmpAdapter.add(cursor.getString(0));
                    cursor.moveToNext();
                }
-              Toast.makeText(getApplicationContext(), num.toString(), Toast.LENGTH_SHORT).show();
+              //Toast.makeText(getApplicationContext(), num.toString(), Toast.LENGTH_SHORT).show();
 
            }
        });
-
+   Emp_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       @Override
+       public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+       {
+           String selectedItem = (String) parent.getItemAtPosition(position);
+           Emp_name_gotten=selectedItem;
+          // Toast.makeText(getApplicationContext(),selectedItem, Toast.LENGTH_SHORT).show();
+           Intent i=new Intent(MainActivity.this,Display_Employees.class);
+           startActivity(i);
+       }
+   });
     }
+
+
 }
